@@ -1,0 +1,34 @@
+{
+  "IndexId": 107,
+  "Name": "ProductInventories/GroupByProdctId",
+  "LockMode": "Unlock",
+  "Map": "from productInventory in docs.ProductInventories\nselect new {\n\tProductId = productInventory.ProductId,\n\tProductName = ((string)((this.LoadDocument(productInventory.ProductId)).Name ?? \"Brak\")),\n\tLocationCount = 1,\n\tQuantityCount = productInventory.Quantity\n}",
+  "Maps": [
+    "from productInventory in docs.ProductInventories\nselect new {\n\tProductId = productInventory.ProductId,\n\tProductName = ((string)((this.LoadDocument(productInventory.ProductId)).Name ?? \"Brak\")),\n\tLocationCount = 1,\n\tQuantityCount = productInventory.Quantity\n}"
+  ],
+  "Reduce": "from result in results\ngroup result by new {\n\tProductId = result.ProductId,\n\tProductName = result.ProductName\n} into g\nselect new {\n\tProductId = g.Key.ProductId,\n\tProductName = g.Key.ProductName,\n\tLocationCount = Enumerable.Sum(g, x => ((int)x.LocationCount)),\n\tQuantityCount = ((short)Enumerable.Sum(g, y => ((int)(y.QuantityCount))))\n}",
+  "IsMapReduce": true,
+  "IsCompiled": false,
+  "Stores": {
+    "ProductId": "Yes",
+    "ProductName": "Yes",
+    "LocationCount": "Yes",
+    "QuantityCount": "Yes"
+  },
+  "Indexes": {},
+  "SortOptions": {
+    "LocationCount": "Int",
+    "QuantityCount": "Short"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "MapReduce",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

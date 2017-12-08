@@ -1,0 +1,28 @@
+{
+  "IndexId": 60,
+  "Name": "ProductInventories/ByBinAndLocationNameAndProductNameAndQuantityAndShelf",
+  "LockMode": "Unlock",
+  "Map": "from productInventory in docs.ProductInventories\nselect new {\n\tLocationName = (this.LoadDocument(productInventory.LocationId)).Name,\n\tProductName = (this.LoadDocument(productInventory.ProductId)).Name,\n\tQuantity = productInventory.Quantity,\n\tBin = productInventory.Bin,\n\tShelf = productInventory.Shelf\n}",
+  "Maps": [
+    "from productInventory in docs.ProductInventories\nselect new {\n\tLocationName = (this.LoadDocument(productInventory.LocationId)).Name,\n\tProductName = (this.LoadDocument(productInventory.ProductId)).Name,\n\tQuantity = productInventory.Quantity,\n\tBin = productInventory.Bin,\n\tShelf = productInventory.Shelf\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "Quantity": "Short"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

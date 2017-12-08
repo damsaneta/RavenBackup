@@ -1,0 +1,28 @@
+{
+  "IndexId": 64,
+  "Name": "Products/ByListPrice",
+  "LockMode": "Unlock",
+  "Map": "from product in docs.Products\nselect new {\n\tListPrice = product.ListPrice\n}",
+  "Maps": [
+    "from product in docs.Products\nselect new {\n\tListPrice = product.ListPrice\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "ListPrice": "Double"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

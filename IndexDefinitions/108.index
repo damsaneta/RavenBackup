@@ -1,0 +1,30 @@
+{
+  "IndexId": 108,
+  "Name": "Products/ByNameAndColorAndProductNumber",
+  "LockMode": "Unlock",
+  "Map": "from product in docs.Products\nselect new {\n\tName = product.Name,\n\tProductNumber = product.ProductNumber,\n\tColor = product.Color\n}",
+  "Maps": [
+    "from product in docs.Products\nselect new {\n\tName = product.Name,\n\tProductNumber = product.ProductNumber,\n\tColor = product.Color\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {
+    "Name": "Yes",
+    "ProductNumber": "Yes",
+    "Color": "Yes"
+  },
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

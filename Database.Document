@@ -1,0 +1,10 @@
+{
+  "Id": "AWL",
+  "Settings": {
+    "Raven/ActiveBundles": "",
+    "Raven/DataDir": "~/AWL",
+    "Raven/StorageTypeName": "Esent"
+  },
+  "SecuredSettings": {},
+  "Disabled": false
+}

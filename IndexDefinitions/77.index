@@ -1,0 +1,26 @@
+{
+  "IndexId": 77,
+  "Name": "ProductInventories/ByShelfAndBin",
+  "LockMode": "Unlock",
+  "Map": "from productInventory in docs.ProductInventories\nselect new {\n\tPlace = (productInventory.Shelf + \" \") + productInventory.Bin\n}",
+  "Maps": [
+    "from productInventory in docs.ProductInventories\nselect new {\n\tPlace = (productInventory.Shelf + \" \") + productInventory.Bin\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

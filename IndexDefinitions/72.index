@@ -1,0 +1,28 @@
+{
+  "IndexId": 72,
+  "Name": "Auto/Products/By__alphaNumeric_ProductNumber",
+  "LockMode": "Unlock",
+  "Map": "from doc in docs.Products\nselect new {\n\t__alphaNumeric_ProductNumber = doc[\"__alphaNumeric;ProductNumber\"]\n}",
+  "Maps": [
+    "from doc in docs.Products\nselect new {\n\t__alphaNumeric_ProductNumber = doc[\"__alphaNumeric;ProductNumber\"]\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {
+    "__alphaNumeric_ProductNumber": "[\"__alphaNumeric;ProductNumber\"]"
+  },
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Auto",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

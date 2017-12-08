@@ -1,0 +1,29 @@
+{
+  "IndexId": 76,
+  "Name": "Products/ByNameAndColor",
+  "LockMode": "Unlock",
+  "Map": "from product in docs.Products\nselect new {\n\tName = product.Name.Boost(10),\n\tColor = product.Color.Boost(5)\n}",
+  "Maps": [
+    "from product in docs.Products\nselect new {\n\tName = product.Name.Boost(10),\n\tColor = product.Color.Boost(5)\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {
+    "Name": "Analyzed",
+    "Color": "NotAnalyzed"
+  },
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

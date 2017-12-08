@@ -1,0 +1,32 @@
+{
+  "IndexId": 106,
+  "Name": "Products/GroupByProductSubcategoryId",
+  "LockMode": "Unlock",
+  "Map": "from product in docs.Products\nselect new {\n\tProductSubcategoryId = product.ProductSubcategoryId,\n\tProductSubcategoryName = ((string)((this.LoadDocument(product.ProductSubcategoryId)).Name ?? \"Brak\")),\n\tCount = 1\n}",
+  "Maps": [
+    "from product in docs.Products\nselect new {\n\tProductSubcategoryId = product.ProductSubcategoryId,\n\tProductSubcategoryName = ((string)((this.LoadDocument(product.ProductSubcategoryId)).Name ?? \"Brak\")),\n\tCount = 1\n}"
+  ],
+  "Reduce": "from result in results\ngroup result by new {\n\tProductSubcategoryId = result.ProductSubcategoryId,\n\tProductSubcategoryName = result.ProductSubcategoryName\n} into g\nselect new {\n\tProductSubcategoryId = g.Key.ProductSubcategoryId,\n\tCount = Enumerable.Sum(g, x => ((int)x.Count)),\n\tProductSubcategoryName = g.Key.ProductSubcategoryName\n}",
+  "IsMapReduce": true,
+  "IsCompiled": false,
+  "Stores": {
+    "ProductSubcategoryId": "Yes",
+    "ProductSubcategoryName": "Yes",
+    "Count": "Yes"
+  },
+  "Indexes": {},
+  "SortOptions": {
+    "Count": "Int"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "MapReduce",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

@@ -1,0 +1,26 @@
+{
+  "IndexId": 43,
+  "Name": "UnitMeasures/ByNameAndUnitMeasureCode",
+  "LockMode": "Unlock",
+  "Map": "from unitMeasure in docs.UnitMeasures\nselect new {\n\tUnitMeasureCode = unitMeasure.UnitMeasureCode,\n\tName = unitMeasure.Name\n}",
+  "Maps": [
+    "from unitMeasure in docs.UnitMeasures\nselect new {\n\tUnitMeasureCode = unitMeasure.UnitMeasureCode,\n\tName = unitMeasure.Name\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

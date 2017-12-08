@@ -1,0 +1,26 @@
+{
+  "IndexId": 61,
+  "Name": "ProductSubcategories/ByNameAndProductCategoryId",
+  "LockMode": "Unlock",
+  "Map": "from productSubcategory in docs.ProductSubcategories\nselect new {\n\tName = productSubcategory.Name,\n\tProductCategoryId = productSubcategory.ProductCategoryId\n}",
+  "Maps": [
+    "from productSubcategory in docs.ProductSubcategories\nselect new {\n\tName = productSubcategory.Name,\n\tProductCategoryId = productSubcategory.ProductCategoryId\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

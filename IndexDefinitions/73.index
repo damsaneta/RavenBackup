@@ -1,0 +1,28 @@
+{
+  "IndexId": 73,
+  "Name": "ProductSubcategories/ByNameExactMatchTerm",
+  "LockMode": "Unlock",
+  "Map": "from productSubcategory in docs.ProductSubcategories\nselect new {\n\tName = productSubcategory.Name\n}",
+  "Maps": [
+    "from productSubcategory in docs.ProductSubcategories\nselect new {\n\tName = productSubcategory.Name\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {
+    "Name": "NotAnalyzed"
+  },
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

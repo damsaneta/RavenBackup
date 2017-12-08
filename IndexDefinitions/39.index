@@ -1,0 +1,26 @@
+{
+  "IndexId": 39,
+  "Name": "Locations/ByName",
+  "LockMode": "Unlock",
+  "Map": "from location in docs.Locations\nselect new {\n\tName = location.Name\n}",
+  "Maps": [
+    "from location in docs.Locations\nselect new {\n\tName = location.Name\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

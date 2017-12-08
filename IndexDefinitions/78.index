@@ -1,0 +1,28 @@
+{
+  "IndexId": 78,
+  "Name": "Products/BySellStartDate",
+  "LockMode": "Unlock",
+  "Map": "from product in docs.Products\nselect new {\n\tYearOfSell = product.SellStartDate.Year\n}",
+  "Maps": [
+    "from product in docs.Products\nselect new {\n\tYearOfSell = product.SellStartDate.Year\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {},
+  "Indexes": {},
+  "SortOptions": {
+    "YearOfSell": "Int"
+  },
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}

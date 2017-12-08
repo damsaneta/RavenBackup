@@ -1,0 +1,29 @@
+{
+  "IndexId": 105,
+  "Name": "ProductInventories/ByProductNameAndLocationName",
+  "LockMode": "Unlock",
+  "Map": "from productInventory in docs.ProductInventories\nselect new {\n\tLocationName = (this.LoadDocument(productInventory.LocationId)).Name,\n\tProductName = (this.LoadDocument(productInventory.ProductId)).Name\n}",
+  "Maps": [
+    "from productInventory in docs.ProductInventories\nselect new {\n\tLocationName = (this.LoadDocument(productInventory.LocationId)).Name,\n\tProductName = (this.LoadDocument(productInventory.ProductId)).Name\n}"
+  ],
+  "Reduce": null,
+  "IsMapReduce": false,
+  "IsCompiled": false,
+  "Stores": {
+    "LocationName": "Yes",
+    "ProductName": "Yes"
+  },
+  "Indexes": {},
+  "SortOptions": {},
+  "Analyzers": {},
+  "Fields": [],
+  "Suggestions": {},
+  "TermVectors": {},
+  "SpatialIndexes": {},
+  "InternalFieldsMapping": {},
+  "MaxIndexOutputsPerDocument": null,
+  "Type": "Map",
+  "DisableInMemoryIndexing": false,
+  "IsTestIndex": false,
+  "IsSideBySideIndex": false
+}
